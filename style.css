@@ -48,3 +48,6 @@ footer a{margin:0 8px}
 .calc label{display:block;font-weight:600;margin-bottom:6px}
 .calc input,.calc select,.calc textarea{width:100%;max-width:520px;padding:10px;border:1px solid #c9c9dc;border-radius:8px;font:inherit;background:#fff;color:inherit;box-sizing:border-box}
 .calc input:focus,.calc select:focus,.calc textarea:focus{outline:2px solid #4b3fc7;outline-offset:1px}
+
+.video{position:relative;width:100%;max-width:720px;aspect-ratio:16/9;margin:18px 0;border-radius:12px;overflow:hidden;background:#000}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}

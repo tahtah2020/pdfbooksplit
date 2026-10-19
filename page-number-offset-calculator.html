@@ -23,6 +23,9 @@
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I convert a book page number to a PDF page number?", "acceptedAnswer": {"@type": "Answer", "text": "Add the offset. The offset is the PDF page that holds book page 1, minus 1. If book page 1 is on PDF page 14, the offset is 13, so book page 41 is PDF page 54."}}, {"@type": "Question", "name": "Why does the PDF page number differ from the number printed on the page?", "acceptedAnswer": {"@type": "Answer", "text": "The PDF counts every page from the cover onward, including the title page, copyright page and contents. The printed number usually starts from the first page of the main text."}}, {"@type": "Question", "name": "What if the front matter uses roman numerals?", "acceptedAnswer": {"@type": "Answer", "text": "The roman numerals are on pages before book page 1. They do not change the offset, which is measured from book page 1. To convert a roman-numbered page, count back from book page 1 in your viewer."}}, {"@type": "Question", "name": "Does the calculator upload my PDF?", "acceptedAnswer": {"@type": "Answer", "text": "No. It only does arithmetic on the numbers you type, in your browser. There is no file and no upload."}}]}
 </script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "VideoObject", "name": "How to Split a PDF Book into Chapters Without Bookmarks (Windows, Offline)", "description": "Demo: split a PDF book that has no bookmarks into one PDF per chapter by pasting the printed table of contents and entering the page offset.", "thumbnailUrl": ["https://i.ytimg.com/vi/aueXRl4oe9s/maxresdefault.jpg"], "uploadDate": "2026-10-19", "duration": "PT53S", "embedUrl": "https://www.youtube.com/embed/aueXRl4oe9s", "contentUrl": "https://youtu.be/aueXRl4oe9s"}
+</script>
 </head>
 <body>
 <header class="nav"><div class="wrap">
@@ -32,6 +35,9 @@
 <main><div class="wrap"><article class="doc">
 <h1>Book page to PDF page calculator</h1>
 <p><strong>The PDF page number equals the book page number plus the offset, where offset = (PDF page that holds book page 1) - 1.</strong> Use the calculator below to convert printed page numbers from a table of contents or an index into the page numbers your PDF viewer shows. It runs in your browser; nothing is uploaded.</p>
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/aueXRl4oe9s" title="How to split a PDF book into chapters without bookmarks" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+<p class="note">Video (53 seconds): the whole process on a sample book. <a href="https://youtu.be/aueXRl4oe9s">Watch on YouTube</a>.</p>
+
 
 <div class="calc" id="calc">
 <div class="calc-row">
