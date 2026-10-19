@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PDF Page Number Offset Calculator: Book Page to PDF Page – PDF BOOK Split</title>
+<meta name="description" content="Free calculator that converts a printed book page number to the PDF page number, and back. Enter the PDF page that holds book page 1. Works in your browser, nothing is uploaded.">
+<link rel="canonical" href="https://pdfbooksplit.com/page-number-offset-calculator.html">
+<link rel="alternate" hreflang="en" href="https://pdfbooksplit.com/page-number-offset-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://pdfbooksplit.com/page-number-offset-calculator.html">
+<link rel="stylesheet" href="style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="PDF BOOK Split">
+<meta property="og:title" content="PDF Page Number Offset Calculator: Book Page to PDF Page – PDF BOOK Split">
+<meta property="og:description" content="Free calculator that converts a printed book page number to the PDF page number, and back. Enter the PDF page that holds book page 1. Works in your browser, nothing is uploaded.">
+<meta property="og:url" content="https://pdfbooksplit.com/page-number-offset-calculator.html">
+<meta property="og:image" content="https://pdfbooksplit.com/images/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Book page to PDF page calculator", "description": "Free calculator that converts a printed book page number to the PDF page number, and back. Enter the PDF page that holds book page 1. Works in your browser, nothing is uploaded.", "inLanguage": "en", "dateModified": "2026-10-19", "datePublished": "2026-10-19", "mainEntityOfPage": "https://pdfbooksplit.com/page-number-offset-calculator.html", "image": "https://pdfbooksplit.com/images/og-cover.jpg", "author": {"@type": "Organization", "name": "PDF BOOK Split", "url": "https://pdfbooksplit.com/"}, "publisher": {"@type": "Organization", "name": "PDF BOOK Split", "url": "https://pdfbooksplit.com/"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I convert a book page number to a PDF page number?", "acceptedAnswer": {"@type": "Answer", "text": "Add the offset. The offset is the PDF page that holds book page 1, minus 1. If book page 1 is on PDF page 14, the offset is 13, so book page 41 is PDF page 54."}}, {"@type": "Question", "name": "Why does the PDF page number differ from the number printed on the page?", "acceptedAnswer": {"@type": "Answer", "text": "The PDF counts every page from the cover onward, including the title page, copyright page and contents. The printed number usually starts from the first page of the main text."}}, {"@type": "Question", "name": "What if the front matter uses roman numerals?", "acceptedAnswer": {"@type": "Answer", "text": "The roman numerals are on pages before book page 1. They do not change the offset, which is measured from book page 1. To convert a roman-numbered page, count back from book page 1 in your viewer."}}, {"@type": "Question", "name": "Does the calculator upload my PDF?", "acceptedAnswer": {"@type": "Answer", "text": "No. It only does arithmetic on the numbers you type, in your browser. There is no file and no upload."}}]}
+</script>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+<a class="brand" href="index.html">PDF <span>BOOK Split</span></a>
+<a href="ar.html">العربية</a>
+</div></header>
+<main><div class="wrap"><article class="doc">
+<h1>Book page to PDF page calculator</h1>
+<p><strong>The PDF page number equals the book page number plus the offset, where offset = (PDF page that holds book page 1) - 1.</strong> Use the calculator below to convert printed page numbers from a table of contents or an index into the page numbers your PDF viewer shows. It runs in your browser; nothing is uploaded.</p>
+
+<div class="calc" id="calc">
+<div class="calc-row">
+<label for="p1">Book page 1 is PDF page</label>
+<input id="p1" type="text" inputmode="numeric" autocomplete="off" placeholder="14" value="14">
+</div>
+<div class="calc-row">
+<label for="dir">Convert</label>
+<select id="dir"><option value="b2p">Book page numbers to PDF page numbers</option><option value="p2b">PDF page numbers to book page numbers</option></select>
+</div>
+<div class="calc-row">
+<label for="nums" id="numsLabel">Book page numbers (separate with commas, spaces or new lines)</label>
+<textarea id="nums" rows="3" placeholder="1, 41, 87, 132">1, 41, 87, 132</textarea>
+</div>
+<p id="calcMsg" class="note" role="status" aria-live="polite"></p>
+<table id="calcOut"><thead><tr><th id="h1">Book page</th><th id="h2">PDF page</th></tr></thead><tbody></tbody></table>
+<p id="calcSum" class="note"></p>
+</div>
+<script>
+(function(){
+var D="0123456789",AR="\u0660\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u0669",FA="\u06F0\u06F1\u06F2\u06F3\u06F4\u06F5\u06F6\u06F7\u06F8\u06F9";
+function norm(s){return String(s).replace(/[\u0660-\u0669\u06F0-\u06F9]/g,function(c){var k=AR.indexOf(c);return k>=0?D[k]:D[FA.indexOf(c)];});}
+var p1=document.getElementById("p1"),dir=document.getElementById("dir"),nums=document.getElementById("nums"),msg=document.getElementById("calcMsg"),sum=document.getElementById("calcSum"),tb=document.querySelector("#calcOut tbody");
+function run(){
+ var b2p=dir.value==="b2p";
+ document.getElementById("h1").textContent=b2p?"Book page":"PDF page";
+ document.getElementById("h2").textContent=b2p?"PDF page":"Book page";
+ document.getElementById("numsLabel").textContent=(b2p?"Book":"PDF")+" page numbers (separate with commas, spaces or new lines)";
+ tb.innerHTML="";msg.textContent="";sum.textContent="";
+ var v=norm(p1.value).trim();
+ if(!/^\d+$/.test(v)||parseInt(v,10)<1){msg.textContent="Enter the PDF page where the book's page 1 appears, for example 14.";return;}
+ var n1=parseInt(v,10),off=n1-1;
+ var list=norm(nums.value).split(/[^0-9]+/).filter(Boolean).map(Number);
+ if(!list.length){msg.textContent="Enter at least one page number.";return;}
+ list.slice(0,500).forEach(function(x){
+  var tr=document.createElement("tr"),a=document.createElement("td"),c=document.createElement("td");
+  a.textContent=x;
+  if(b2p){c.textContent=x+off;}
+  else{var r=x-off;c.textContent=r>=1?String(r):"before book page 1 (front matter)";}
+  tr.appendChild(a);tr.appendChild(c);tb.appendChild(tr);
+ });
+ sum.textContent="Offset = "+n1+" - 1 = "+off+". "+(b2p?"PDF page = book page + "+off+".":"Book page = PDF page - "+off+".");
+}
+[p1,dir,nums].forEach(function(e){e.addEventListener("input",run);e.addEventListener("change",run);});
+run();
+})();
+</script>
+
+<h2>How it works, with an example</h2>
+<table>
+<tr><th>Item</th><th>Value</th></tr>
+<tr><td>Book page 1 sits on PDF page</td><td>14</td></tr>
+<tr><td>Offset</td><td>13 (14 - 1)</td></tr>
+<tr><td>Table of contents says Chapter 3 starts on book page</td><td>41</td></tr>
+<tr><td>Chapter 3 starts on PDF page</td><td>54 (41 + 13)</td></tr>
+</table>
+
+<h2>How to find the PDF page where book page 1 appears</h2>
+<ol>
+<li>Open the PDF and scroll past the cover, title page, copyright page and contents.</li>
+<li>Find the first page that carries the printed number 1 (or the first page of chapter 1).</li>
+<li>Look at the page counter in your PDF viewer, not the number printed on the page. That counter value is what you type in the first box.</li>
+</ol>
+
+<h2>When the offset is not constant</h2>
+<p>One offset works while the page numbering is continuous. Some books restart numbering in each part, add plates of photographs without page numbers, or use roman numerals for the front matter. In those cases use the offset of the section you are converting, and check the first and last page of each chapter in your viewer.</p>
+
+<h2>Need to split every chapter?</h2>
+<p>If you want one PDF per chapter, <a href="split-pdf-without-bookmarks.html">PDF BOOK Split</a> does this sum for every line of a pasted table of contents and saves the files for you. It is a Windows program that works offline.</p>
+<h2>Questions</h2>
+<details><summary>How do I convert a book page number to a PDF page number?</summary><p>Add the offset. The offset is the PDF page that holds book page 1, minus 1. If book page 1 is on PDF page 14, the offset is 13, so book page 41 is PDF page 54.</p></details>
+<details><summary>Why does the PDF page number differ from the number printed on the page?</summary><p>The PDF counts every page from the cover onward, including the title page, copyright page and contents. The printed number usually starts from the first page of the main text.</p></details>
+<details><summary>What if the front matter uses roman numerals?</summary><p>The roman numerals are on pages before book page 1. They do not change the offset, which is measured from book page 1. To convert a roman-numbered page, count back from book page 1 in your viewer.</p></details>
+<details><summary>Does the calculator upload my PDF?</summary><p>No. It only does arithmetic on the numbers you type, in your browser. There is no file and no upload.</p></details>
+
+<p style="text-align:center;margin-top:28px"><a class="btn" href="https://payhip.com/b/KgGHx">Get PDF BOOK Split · $9</a></p>
+<p class="note" style="text-align:center">Windows 10 / 11 (64-bit) · Works offline · 30-day refund</p>
+</article></div></main>
+<footer><div class="wrap">
+<a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refund.html">Refunds</a><a href="mailto:support@pdfbooksplit.com">support@pdfbooksplit.com</a>
+<div>© 2026 PDF BOOK Split</div>
+</div></footer>
+</body>
+</html>

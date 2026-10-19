@@ -42,3 +42,9 @@ footer a{margin:0 8px}
 .doc h2{margin-top:30px}
 .doc .shot{margin:18px auto}
 @media(max-width:600px){.hero h1{font-size:30px}}
+
+.calc{background:#fff;border:1px solid #e3e3ee;border-radius:12px;padding:18px;margin:18px 0}
+.calc-row{margin-bottom:14px}
+.calc label{display:block;font-weight:600;margin-bottom:6px}
+.calc input,.calc select,.calc textarea{width:100%;max-width:520px;padding:10px;border:1px solid #c9c9dc;border-radius:8px;font:inherit;background:#fff;color:inherit;box-sizing:border-box}
+.calc input:focus,.calc select:focus,.calc textarea:focus{outline:2px solid #4b3fc7;outline-offset:1px}
