@@ -11,7 +11,7 @@ header.nav .wrap{display:flex;align-items:center;justify-content:space-between;h
 .brand span{color:var(--accent)}
 .hero{padding:72px 20px 48px;text-align:center;background:linear-gradient(180deg,#E9E7FF 0%,#F4F5FC 100%);max-width:none}.hero>*{max-width:960px;margin-left:auto;margin-right:auto}
 .hero h1{font-size:42px;line-height:1.2;margin:0 auto 16px;background:linear-gradient(90deg,#2A2380,#7C5CFF);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{font-size:19px;color:var(--mute);max-width:660px;margin:0 auto 28px}
+.hero p{font-size:24px;color:var(--mute);max-width:660px;margin:0 auto 28px}
 .btn{display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;text-decoration:none;padding:13px 28px;border-radius:12px;font-weight:600;margin:4px;box-shadow:0 8px 20px rgba(79,70,200,.30);transition:transform .15s,box-shadow .15s}.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(79,70,200,.38)}
 .btn.alt{background:#fff;color:var(--accent);border:1px solid var(--accent);box-shadow:none}
 .note{font-size:14px;color:var(--mute);margin-top:12px}
