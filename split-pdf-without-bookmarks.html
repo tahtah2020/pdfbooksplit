@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Split a PDF Into Chapters Without Bookmarks – PDF BOOK Split</title>
+<meta name="description" content="Split a PDF into chapters even when it has no bookmarks: paste the printed table of contents, enter the page offset, and get one file per chapter. Offline, Windows.">
+<link rel="canonical" href="https://pdfbooksplit.com/split-pdf-without-bookmarks.html">
+<link rel="alternate" hreflang="en" href="https://pdfbooksplit.com/split-pdf-without-bookmarks.html">
+<link rel="alternate" hreflang="ar" href="https://pdfbooksplit.com/ar-split-pdf-book-chapters.html">
+<link rel="alternate" hreflang="x-default" href="https://pdfbooksplit.com/split-pdf-without-bookmarks.html">
+<link rel="stylesheet" href="style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="PDF BOOK Split">
+<meta property="og:title" content="Split a PDF Into Chapters Without Bookmarks – PDF BOOK Split">
+<meta property="og:description" content="Split a PDF into chapters even when it has no bookmarks: paste the printed table of contents, enter the page offset, and get one file per chapter. Offline, Windows.">
+<meta property="og:url" content="https://pdfbooksplit.com/split-pdf-without-bookmarks.html">
+<meta property="og:image" content="https://pdfbooksplit.com/images/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Split a PDF into chapters when it has no bookmarks", "description": "Split a PDF into chapters even when it has no bookmarks: paste the printed table of contents, enter the page offset, and get one file per chapter. Offline, Windows.", "inLanguage": "en", "dateModified": "2026-10-19", "datePublished": "2026-10-19", "mainEntityOfPage": "https://pdfbooksplit.com/split-pdf-without-bookmarks.html", "image": "https://pdfbooksplit.com/images/og-cover.jpg", "author": {"@type": "Organization", "name": "PDF BOOK Split", "url": "https://pdfbooksplit.com/"}, "publisher": {"@type": "Organization", "name": "PDF BOOK Split", "url": "https://pdfbooksplit.com/"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I split a PDF into chapters if it has no bookmarks?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. In PDF BOOK Split, choose Book chapters, paste the printed table of contents and enter which PDF page is book page 1. The program converts the printed page numbers to PDF pages and saves one file per chapter."}}, {"@type": "Question", "name": "What is the page offset?", "acceptedAnswer": {"@type": "Answer", "text": "It is the difference between the page number printed in the book and the page number in the PDF. If book page 1 is on PDF page 14, the offset is 13, so book page 41 is PDF page 54."}}, {"@type": "Question", "name": "Does it read the contents page automatically?", "acceptedAnswer": {"@type": "Answer", "text": "No. You paste the contents text yourself. This works for scanned books and for PDFs whose text cannot be extracted."}}, {"@type": "Question", "name": "Are my files uploaded anywhere?", "acceptedAnswer": {"@type": "Answer", "text": "No. Splitting happens entirely on your computer, with no account and no upload."}}]}
+</script>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+<a class="brand" href="/">PDF <span>BOOK Split</span></a>
+<a href="ar-split-pdf-book-chapters.html">العربية</a>
+</div></header>
+<main><div class="wrap"><article class="doc">
+<h1>Split a PDF into chapters when it has no bookmarks</h1>
+<p><strong>If your PDF has no bookmarks, you can still split it by chapter.</strong> Copy the book's printed table of contents, tell PDF BOOK Split which PDF page is book page 1, and it saves one PDF per chapter. It runs offline on Windows 10 and 11.</p>
+
+<h2>Why bookmark-based splitters fail on many books</h2>
+<p>Tools that split "by bookmarks" read the outline stored inside the PDF. Many downloaded, scanned or converted books have no outline at all, so those tools have nothing to cut on. The printed table of contents is still there on the page, but a splitter cannot use it unless you map it to PDF pages.</p>
+
+<h2>The real problem: printed page numbers are not PDF page numbers</h2>
+<p>The contents page says <em>Chapter 3 ... 41</em>. That is the number printed on the page, not the page number in your PDF viewer. A cover, a title page and a preface usually push everything forward. The difference is the page offset.</p>
+<table>
+<tr><th>Item</th><th>Value</th></tr>
+<tr><td>Book page 1 sits on PDF page</td><td>14</td></tr>
+<tr><td>Offset</td><td>13 (14 - 1)</td></tr>
+<tr><td>Contents says Chapter 3 starts on book page</td><td>41</td></tr>
+<tr><td>Chapter 3 really starts on PDF page</td><td>54 (41 + 13)</td></tr>
+</table>
+<p>PDF BOOK Split does this sum for every chapter, so you only enter one number.</p>
+
+<h2>How to split a PDF into chapters without bookmarks</h2>
+<ol>
+<li>Open the PDF in PDF BOOK Split, or drag the file onto the window.</li>
+<li>Choose <strong>Book chapters</strong>. A window for the table of contents opens.</li>
+<li>Paste the contents, one chapter per line, each ending with its page number. Dots between the title and the number are fine, for example <em>Introduction ........ 1</em>.</li>
+<li>In <strong>Book page 1 is PDF page</strong>, type the PDF page where the book's page 1 appears.</li>
+<li>Check the preview table. It shows each file name and its PDF page range. If you want the cover and preface too, tick <strong>Also save the pages before the first chapter</strong>.</li>
+<li>Press <strong>Use these chapters</strong>, then <strong>Split PDF</strong>.</li>
+</ol>
+<p>The files are saved in a new folder next to your PDF and named like <em>01 Introduction.pdf</em>. Your original file is not changed. If the PDF does have bookmarks, they are copied into each new file.</p>
+<img class="shot" src="images/app-chapters.jpg" alt="PDF BOOK Split chapter window with a pasted table of contents and the preview of chapter page ranges" width="746" height="686" loading="lazy" style="max-width:560px">
+
+<h2>How this compares with other ways to do it</h2>
+<table>
+<tr><th>Method</th><th>Needs bookmarks in the PDF</th><th>Uses the printed contents</th><th>Works offline</th></tr>
+<tr><td>Bookmark-based splitters, for example PDFsam in bookmark mode</td><td>Yes</td><td>No</td><td>Yes</td></tr>
+<tr><td>Online splitters</td><td>Usually yes for chapter splitting</td><td>No</td><td>No, files are uploaded</td></tr>
+<tr><td>Typing page ranges by hand in any splitter</td><td>No</td><td>You do the offset sums yourself</td><td>Depends on the tool</td></tr>
+<tr><td>PDF BOOK Split, Book chapters mode</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+</table>
+<p>If a book has only a few chapters, typing page ranges in any splitter is fine, and the offset sum above is the same. This program saves time when there are many chapters or many books.</p>
+
+<h2>What it does not do</h2>
+<ul>
+<li>It does not find the contents page for you. You paste the text. This is the reliable method for books whose text cannot be extracted, which is common with Arabic PDFs.</li>
+<li>It runs on Windows 10 and 11, 64-bit. There is no Mac version.</li>
+</ul>
+<h2>Questions</h2>
+<details><summary>Can I split a PDF into chapters if it has no bookmarks?</summary><p>Yes. In PDF BOOK Split, choose Book chapters, paste the printed table of contents and enter which PDF page is book page 1. The program converts the printed page numbers to PDF pages and saves one file per chapter.</p></details>
+<details><summary>What is the page offset?</summary><p>It is the difference between the page number printed in the book and the page number in the PDF. If book page 1 is on PDF page 14, the offset is 13, so book page 41 is PDF page 54.</p></details>
+<details><summary>Does it read the contents page automatically?</summary><p>No. You paste the contents text yourself. This works for scanned books and for PDFs whose text cannot be extracted.</p></details>
+<details><summary>Are my files uploaded anywhere?</summary><p>No. Splitting happens entirely on your computer, with no account and no upload.</p></details>
+
+<p style="text-align:center;margin-top:28px"><a class="btn" href="https://payhip.com/b/KgGHx">Get PDF BOOK Split · $9</a></p>
+<p class="note" style="text-align:center">Windows 10 / 11 (64-bit) · Works offline · 30-day refund</p>
+</article></div></main>
+<footer><div class="wrap">
+<a href="/">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refund.html">Refunds</a><a href="mailto:support@pdfbooksplit.com">support@pdfbooksplit.com</a>
+<div>© 2026 PDF BOOK Split</div>
+</div></footer>
+</body>
+</html>

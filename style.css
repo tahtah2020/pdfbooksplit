@@ -33,4 +33,11 @@ footer a{margin:0 8px}
 .shots figure{margin:0}
 .shots img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 24px rgba(31,29,80,.10)}
 .shots figcaption{margin-top:8px;font-weight:600;font-size:15px}
+.doc table{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:15px}
+.doc th,.doc td{border:1px solid var(--line);padding:9px 12px;text-align:start;vertical-align:top}
+.doc th{background:#EFEEFB}
+.doc ol,.doc ul{padding-inline-start:22px}
+.doc li{margin:6px 0}
+.doc h2{margin-top:30px}
+.doc .shot{margin:18px auto}
 @media(max-width:600px){.hero h1{font-size:30px}}
