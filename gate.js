@@ -13,7 +13,7 @@
     os: { mac: 'ماك', ios: 'آيفون أو آيباد', android: 'أندرويد', linux: 'لينكس', chromeos: 'كروم بوك' }
   } : {
     title: 'Before you continue',
-    body: 'PDF BOOK Split runs only on a Windows 10 or 11 computer (64-bit), desktop or laptop.',
+    body: 'PDF BOOK SPLIT runs only on a Windows 10 or 11 computer (64-bit), desktop or laptop.',
     no: 'It does not run on: Mac, Linux, Chromebook, iPhone, iPad, Android.',
     warn: 'You seem to be browsing from {os}. The program will not run on this device. Continue only if you will use it on a Windows computer.',
     check: 'I confirm I will use the program on a Windows 10 or 11 computer.',
