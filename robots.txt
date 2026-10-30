@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /_seo/
 
 User-agent: OAI-SearchBot
 Allow: /
